@@ -1,0 +1,34 @@
+.homepage-body {
+  background-color: #0f0f1a; 
+  color: #f0f0f0; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+}
+
+.property-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex-grow: 1;
+  overflow-y: auto;
+  text-align: center;
+  padding: 2rem 4rem;
+  gap: 2rem;
+}
+
+/* 2 cards per row for tablets */
+@media (max-width: 1024px) {
+  .property-list {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+/* 1 card per row for mobile */
+@media (max-width: 640px) {
+  .property-list {
+    grid-template-columns: 1fr; 
+  }
+}
