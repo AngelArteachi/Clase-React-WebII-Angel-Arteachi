@@ -1,0 +1,382 @@
+/* 🌠 Contenedor Principal - Vortex Dimensional */
+.character-details {
+  background: 
+    radial-gradient(ellipse at center, #0a0e17 0%, #000000 100%),
+    repeating-linear-gradient(
+      45deg,
+      rgba(0, 255, 174, 0.05) 0px,
+      rgba(0, 255, 174, 0.05) 1px,
+      transparent 1px,
+      transparent 20px
+    );
+  color: #fff;
+  padding: 6rem 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+  max-width: 1600px;
+  margin: 4rem auto;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Orbitron', sans-serif;
+  border: 2px solid;
+  border-image: linear-gradient(45deg, #ff00aa, #00f7ff) 1;
+  box-shadow: 
+    0 0 80px rgba(255, 0, 170, 0.3),
+    inset 0 0 40px rgba(0, 247, 255, 0.2);
+  clip-path: polygon(
+    0 0, 
+    100% 0, 
+    100% calc(100% - 60px), 
+    calc(100% - 60px) 100%, 
+    0 100%
+  );
+}
+
+.character-details::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 70%, 
+      rgba(255, 0, 170, 0.1) 0%, 
+      transparent 40%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 🪐 Información del Personaje - Texto Cuántico */
+.character-info {
+  flex: 1;
+  min-width: 400px;
+  position: relative;
+  z-index: 2;
+  background: rgba(11, 12, 16, 0.7);
+  padding: 3rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 0 30px rgba(0, 255, 174, 0.2),
+    inset 0 0 20px rgba(0, 255, 174, 0.1);
+}
+
+.character-info h2 {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  margin-bottom: 2rem;
+  color: transparent;
+  background: linear-gradient(90deg, #00ffae, #00f7ff, #aaff00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(0, 255, 174, 0.5);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.character-info p {
+  margin: 1.5rem 0;
+  font-size: 1.8rem;
+  color: #cbd5e0;
+  text-shadow: 0 0 10px rgba(203, 213, 224, 0.2);
+}
+
+.character-info strong {
+  font-size: 1.9rem;
+  color: #00ffae;
+  text-shadow: 0 0 15px rgba(0, 255, 174, 0.5);
+}
+
+/* 🌠 Botón de Acción - Energía Pura */
+.cta-button {
+  display: inline-block;
+  margin-top: 3rem;
+  background: linear-gradient(45deg, #00ffae, #00f7ff);
+  border: none;
+  padding: 1.5rem 3.5rem;
+  border-radius: 0;
+  color: #000;
+  font-weight: 900;
+  font-size: 1.8rem;
+  cursor: pointer;
+  box-shadow: 
+    0 0 30px rgba(0, 255, 174, 0.5),
+    0 0 20px rgba(0, 247, 255, 0.5);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1.5);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(
+    0 0, 
+    100% 0, 
+    100% calc(100% - 20px), 
+    calc(100% - 20px) 100%, 
+    0 100%
+  );
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.3) 0%,
+    transparent 60%
+  );
+  transform: rotate(30deg);
+  transition: all 0.5s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-8px) scale(1.1);
+  padding: 1.5rem 4.5rem;
+  box-shadow: 
+    0 0 45px rgba(0, 255, 174, 0.7),
+    0 0 30px rgba(0, 247, 255, 0.7);
+}
+
+.cta-button:hover::before {
+  transform: translate(30%, 20%) rotate(30deg);
+}
+
+.cta-button:active {
+  transform: translateY(2px) scale(0.98);
+}
+
+/* 🛸 Imagen del Personaje - Portal Dimensional */
+.character-image {
+  flex: 1;
+  min-width: 400px;
+  position: relative;
+  z-index: 2;
+  transform-style: preserve-3d;
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1.5);
+}
+
+.character-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 2.5rem;
+  box-shadow: 
+    0 0 50px rgba(0, 255, 174, 0.4),
+    0 0 30px rgba(255, 0, 170, 0.3);
+  border: 3px solid;
+  border-image: linear-gradient(45deg, #00ffae, #ff00aa) 1;
+  transition: transform 0.5s ease;
+}
+
+.character-image:hover {
+  transform: scale(1.05) rotateY(5deg);
+}
+
+.character-image:hover img {
+  transform: scale(1.05);
+  box-shadow: 
+    0 0 70px rgba(0, 255, 174, 0.6),
+    0 0 50px rgba(255, 0, 170, 0.5);
+}
+
+/* 🔥 Badge de Estado - Indicador Cuántico */
+.status-badge {
+  display: inline-block;
+  margin-left: 1.5rem;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #000;
+  background: linear-gradient(45deg, #00ffae, #aaff00);
+  box-shadow: 0 0 20px rgba(0, 255, 174, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: relative;
+  top: -0.5rem;
+  animation: pulse-glow 1.5s infinite alternate;
+}
+
+/* 🌀 Animación de Badge - Pulsar Cuántico */
+@keyframes pulse-glow {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+    box-shadow: 0 0 20px rgba(0, 255, 174, 0.5);
+  }
+  100% {
+    transform: scale(1.05);
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(0, 255, 174, 0.8);
+  }
+}
+
+/* 🚀 Página 404 - Agujero Negro */
+.not-found {
+  text-align: center;
+  padding: 8rem 2rem;
+}
+
+.not-found .title {
+  font-size: clamp(4rem, 8vw, 6rem);
+  color: transparent;
+  background: linear-gradient(90deg, #ff00aa, #00f7ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 30px rgba(255, 0, 170, 0.5);
+}
+
+.not-found .subtitle {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  color: #00f7ff;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
+}
+
+.not-found .description {
+  font-size: 1.8rem;
+  color: #cbd5e0;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.not-found .button {
+  display: inline-block;
+  background: linear-gradient(45deg, #ff00aa, #00f7ff);
+  border: none;
+  padding: 1.5rem 4rem;
+  border-radius: 0;
+  color: #000;
+  font-weight: 900;
+  font-size: 1.8rem;
+  cursor: pointer;
+  box-shadow: 
+    0 0 40px rgba(255, 0, 170, 0.5),
+    0 0 30px rgba(0, 247, 255, 0.5);
+  transition: all 0.4s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  clip-path: polygon(
+    0 0, 
+    100% 0, 
+    100% calc(100% - 20px), 
+    calc(100% - 20px) 100%, 
+    0 100%
+  );
+}
+
+.not-found .button:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 
+    0 0 60px rgba(255, 0, 170, 0.7),
+    0 0 40px rgba(0, 247, 255, 0.7);
+}
+
+/* 🌐 Responsive para Dispositivos Interdimensionales */
+@media (max-width: 1200px) {
+  .character-details {
+    padding: 5rem 3rem;
+  }
+  
+  .character-info h2 {
+    font-size: 3.5rem;
+  }
+  
+  .character-info p {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .character-details {
+    padding: 4rem 2rem;
+    gap: 3rem;
+    clip-path: polygon(
+      0 0, 
+      100% 0, 
+      100% calc(100% - 40px), 
+      calc(100% - 40px) 100%, 
+      0 100%
+    );
+  }
+  
+  .character-info, .character-image {
+    min-width: 100%;
+  }
+  
+  .character-info h2 {
+    font-size: 3rem;
+  }
+  
+  .character-info p {
+    font-size: 1.4rem;
+  }
+  
+  .cta-button {
+    font-size: 1.5rem;
+    padding: 1.2rem 2.5rem;
+  }
+  
+  .character-image img {
+    max-width: 100%;
+  }
+  
+  .not-found {
+    padding: 6rem 1rem;
+  }
+}
+
+/* ✨ Efecto de Partículas Flotantes */
+.floating-particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 247, 255, 0.6);
+  border-radius: 50%;
+  animation: float 8s infinite ease-in-out;
+  z-index: 1;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(20px, -20px);
+  }
+  50% {
+    transform: translate(-20px, 10px);
+  }
+  75% {
+    transform: translate(10px, 20px);
+  }
+}
+
+/* Posicionar partículas en character-details */
+.character-details .floating-particle:nth-child(1) {
+  top: 15%;
+  left: 10%;
+  animation-delay: 0s;
+}
+.character-details .floating-particle:nth-child(2) {
+  top: 75%;
+  left: 85%;
+  animation-delay: 2s;
+}
+.character-details .floating-particle:nth-child(3) {
+  top: 45%;
+  left: 20%;
+  animation-delay: 4s;
+}
+.character-details .floating-particle:nth-child(4) {
+  top: 65%;
+  left: 65%;
+  animation-delay: 6s;
+}

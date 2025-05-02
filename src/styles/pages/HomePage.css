@@ -1,0 +1,353 @@
+/* 💫 Reset Extremo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* 🌈 Nueva Paleta Psicodélica */
+  --portal-core: #00f7ff;
+  --void-black: #000;
+  --neon-pink: #aaff00;
+  --acid-green: #aaff00;
+  --plasma-blue: #00aaff;
+  --dark-matter: #f0edf3;
+  
+  /* ✨ Efectos Especiales */
+  --hyper-glow: 0 0 25px;
+  --text-stroke: 1px var(--void-black);
+  --matrix-filter: url('#matrix');
+  --chaos-transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1.5);
+}
+
+/* 🌀 Fondo de Realidad Distorsionada */
+body {
+  background: 
+    radial-gradient(circle at 10% 20%, var(--portal-energy) 0%, 
+    var(--dark-matter) 60%),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 0, 170, 0.3) 3px,
+      rgba(0, 247, 255, 0.3) 5px
+    );
+  color: white;
+  font-family: 'Courier New', monospace;
+  overflow-x: hidden;
+}
+
+/* 🚀 Hero Section - Colapso Dimensional */
+.home-hero {
+  min-height: 120vh;
+  padding: 5rem;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  background: 
+    linear-gradient(135deg, 
+      var(--portal-energy) 0%, 
+      transparent 70%),
+    radial-gradient(
+      ellipse at 20% 40%,
+      var(--portal-core) 0%,
+      transparent 70%
+    ),
+    var(--dark-matter);
+  border-bottom: 3px dashed var(--acid-green);
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 4rem;
+  backdrop-filter: blur(3px);
+}
+
+@media (min-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.hero-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  line-height: 0.9;
+  margin-bottom: 2rem;
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    var(--acid-green),
+    var(--portal-core),
+    var(--neon-pink)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 
+    var(--hyper-glow) var(--portal-energy),
+    0 0 50px var(--plasma-blue);
+  letter-spacing: -0.1em;
+  transform: skewX(-10deg);
+  text-transform: uppercase;
+}
+
+.hero-description {
+  font-size: 1.5rem;
+  color: var(--portal-core);
+  margin-bottom: 3rem;
+  max-width: 700px;
+  line-height: 1.6;
+  text-shadow: 
+    0 0 10px var(--plasma-blue),
+    0 0 5px var(--void-black);
+  border-left: 4px solid var(--acid-green);
+  padding-left: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: var(--chaos-transition);
+  transform-style: preserve-3d;
+  border: 3px solid;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: 0.7s;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn-primary {
+  background: var(--portal-energy);
+  color: var(--void-black);
+  border-color: var(--acid-green);
+  box-shadow: 
+    var(--hyper-glow) var(--portal-energy),
+    inset 0 0 20px var(--neon-pink);
+}
+
+.btn-primary:hover {
+  transform: 
+    translateY(-10px)
+    rotate(5deg)
+    scale(1.1);
+  box-shadow: 
+    0 0 50px var(--portal-energy),
+    inset 0 0 30px var(--neon-pink);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--acid-green);
+  border-color: var(--portal-core);
+  box-shadow: 
+    var(--hyper-glow) var(--portal-core),
+    inset 0 0 20px rgba(0, 247, 255, 0.3);
+}
+
+.btn-secondary:hover {
+  transform: 
+    translateY(-10px)
+    rotate(-5deg)
+    scale(1.1);
+  background: rgba(0, 247, 255, 0.2);
+}
+
+/* 🌀 Portal de Teletransportación */
+.hero-image {
+  position: relative;
+  perspective: 1000px;
+  filter: drop-shadow(0 0 30px var(--portal-core));
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid var(--acid-green);
+  animation: 
+    portalSpin 20s linear infinite,
+    portalPulse 5s ease-in-out infinite alternate;
+  box-shadow: 
+    0 0 100px var(--portal-energy),
+    0 0 200px var(--portal-core),
+    inset 0 0 50px var(--neon-pink);
+}
+
+@keyframes portalSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes portalPulse {
+  0% { 
+    filter: hue-rotate(0deg);
+    opacity: 0.8;
+  }
+  100% { 
+    filter: hue-rotate(90deg);
+    opacity: 1;
+  }
+}
+
+/* 🎆 Galería de Realidades Alternas */
+.gallery-section {
+  padding: 8rem 2rem;
+  background: 
+    linear-gradient(
+      to bottom,
+      var(--dark-matter),
+      #000
+    );
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 3rem;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border: 3px solid var(--plasma-blue);
+  box-shadow: 
+    0 0 30px var(--plasma-blue),
+    inset 0 0 20px var(--portal-energy);
+  transform: 
+    skewX(-5deg)
+    rotate(1deg);
+  transition: var(--chaos-transition);
+}
+
+.gallery-item:nth-child(even) {
+  transform: 
+    skewX(5deg)
+    rotate(-1deg);
+}
+
+.gallery-item:hover {
+  transform: 
+    skewX(0)
+    rotate(0deg)
+    scale(1.1);
+  z-index: 10;
+  box-shadow: 
+    0 0 50px var(--acid-green),
+    inset 0 0 30px var(--neon-pink);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--chaos-transition);
+  filter: grayscale(50%) contrast(120%);
+}
+
+.gallery-item:hover img {
+  filter: grayscale(0%) contrast(150%) brightness(1.2);
+  transform: scale(1.2);
+}
+
+/* ⚡ Sección de Votación Caótica */
+.vote-section {
+  background: 
+    radial-gradient(
+      circle at center,
+      var(--portal-energy) 0%,
+      var(--dark-matter) 70%
+    );
+  padding: 10rem 2rem;
+  color: white;
+  position: relative;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+}
+
+.vote-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 50px,
+      var(--acid-green) 51px,
+      transparent 52px
+    );
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* 🎇 Efectos Especiales Adicionales */
+::selection {
+  background: var(--acid-green);
+  color: var(--void-black);
+  text-shadow: none;
+}
+
+/* Responsive Extremo */
+@media (max-width: 768px) {
+  .home-hero {
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    padding: 3rem 1rem;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    letter-spacing: -0.05em;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+  }
+}
+
+/* Efecto de Distorsión Matrix */
+@supports (filter: url('#matrix')) {
+  .hero-image {
+    filter: url('#matrix') drop-shadow(0 0 30px var(--portal-core));
+  }
+}

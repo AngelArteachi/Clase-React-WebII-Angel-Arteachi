@@ -1,0 +1,469 @@
+/* 🌠 Contenedor Principal - Realidad Distorsionada */
+.details-page {
+  background: 
+    radial-gradient(ellipse at center, #0a0e17 0%, #000000 100%),
+    repeating-linear-gradient(
+      45deg,
+      rgba(0, 255, 174, 0.05) 0px,
+      rgba(0, 255, 174, 0.05) 1px,
+      transparent 1px,
+      transparent 20px
+    );
+  color: #fff;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Orbitron', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.details-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 80% 20%, 
+      rgba(255, 0, 170, 0.1) 0%, 
+      transparent 40%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 🌀 Encabezado - Título Dimensional */
+.details-page-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+  padding: 3rem;
+  background: rgba(11, 12, 16, 0.7);
+  border: 2px solid;
+  border-image: linear-gradient(45deg, #ff00aa, #00f7ff) 1;
+  box-shadow: 
+    0 0 50px rgba(255, 0, 170, 0.3),
+    inset 0 0 30px rgba(0, 247, 255, 0.2);
+  clip-path: polygon(
+    0 0, 
+    100% 0, 
+    100% calc(100% - 40px), 
+    calc(100% - 40px) 100%, 
+    0 100%
+  );
+}
+
+.details-page-header h1 {
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 900;
+  color: transparent;
+  background: linear-gradient(90deg, #ff00aa, #00f7ff, #aaff00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(255, 0, 170, 0.5);
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.details-page-subtitle {
+  font-size: 1.8rem;
+  color: #00f7ff;
+  margin-top: 1.5rem;
+  text-shadow: 0 0 15px rgba(0, 247, 255, 0.5);
+  font-family: 'Courier New', monospace;
+}
+
+/* 🪐 Sección de Personajes - Realidades Alternas */
+.character-like-section {
+  margin: 4rem 0;
+  width: 100%;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.character-like-section h3 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  color: transparent;
+  background: linear-gradient(90deg, #00f7ff, #aaff00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 3rem;
+  text-shadow: 0 0 20px rgba(0, 247, 255, 0.3);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 1rem 3rem;
+  border-bottom: 3px solid #ff00aa;
+}
+
+/* 🌈 Grid de Personajes - Portal Multidimensional */
+.character-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  width: 100%;
+  padding: 0 2rem;
+  perspective: 2000px;
+}
+
+/* 💫 Tarjetas de Personaje - Forma de Cristal */
+.character-card {
+  background: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(10px);
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1.5);
+  box-shadow: 
+    0 0 30px rgba(0, 255, 174, 0.3),
+    inset 0 0 20px rgba(0, 255, 174, 0.1);
+  clip-path: polygon(
+    0 0, 
+    100% 0, 
+    100% calc(100% - 40px), 
+    calc(100% - 40px) 100%, 
+    0 100%
+  );
+  transform: scale(1) rotateY(0deg);
+}
+
+.character-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 0, 170, 0.1) 0%,
+    rgba(0, 247, 255, 0.1) 100%
+  );
+  z-index: 1;
+}
+
+.character-card:hover {
+  transform: scale(1.05) rotateY(10deg);
+  box-shadow: 
+    0 0 50px rgba(0, 255, 174, 0.6),
+    inset 0 0 30px rgba(0, 255, 174, 0.2);
+  z-index: 10;
+}
+
+/* 🔥 Botón de Like - Energía Pura */
+.like-btn-wrapper {
+  text-align: center;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.like-btn {
+  background: linear-gradient(45deg, #ff00aa, #00f7ff);
+  border: none;
+  padding: 1.2rem 2.5rem;
+  border-radius: 0;
+  color: #000;
+  font-weight: 900;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 
+    0 0 25px rgba(255, 0, 170, 0.5),
+    0 0 15px rgba(0, 247, 255, 0.5);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1.5);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(
+    0 0, 
+    100% 0, 
+    100% calc(100% - 20px), 
+    calc(100% - 20px) 100%, 
+    0 100%
+  );
+}
+
+.like-btn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.3) 0%,
+    transparent 60%
+  );
+  transform: rotate(30deg);
+  transition: all 0.5s ease;
+}
+
+.like-btn:hover {
+  transform: translateY(-8px) scale(1.1);
+  box-shadow: 
+    0 0 35px rgba(255, 0, 170, 0.7),
+    0 0 25px rgba(0, 247, 255, 0.7);
+}
+
+.like-btn:hover::before {
+  transform: translate(30%, 20%) rotate(30deg);
+}
+
+.like-btn:active {
+  transform: translateY(2px) scale(0.98);
+}
+
+/* 💖 Contador de Likes - Flujo de Energía */
+.character-likes {
+  font-family: 'Orbitron', sans-serif;
+  color: #ff00aa;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  text-shadow: 
+    0 0 10px rgba(255, 0, 170, 0.8),
+    0 0 20px rgba(255, 0, 170, 0.5);
+  transition: all 0.3s ease;
+  animation: pulse-glow 1.5s infinite alternate;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  background: rgba(255, 0, 170, 0.1);
+  border: 1px solid rgba(255, 0, 170, 0.3);
+}
+
+.character-likes:hover {
+  transform: scale(1.1);
+  color: #00f7ff;
+  text-shadow: 
+    0 0 15px rgba(0, 247, 255, 0.8),
+    0 0 25px rgba(0, 247, 255, 0.5);
+  background: rgba(0, 247, 255, 0.1);
+  border-color: rgba(0, 247, 255, 0.3);
+}
+
+/* 🌀 Animación de Likes - Pulsar Cuántico */
+@keyframes pulse-glow {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* 🎯 Sección de Personaje Favorito - Enfoque Central */
+.liked-characters {
+  margin: 6rem 0;
+  width: 100%;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  padding: 4rem 0;
+  background: rgba(20, 10, 30, 0.7);
+  border-top: 3px solid rgba(255, 0, 170, 0.5);
+  border-bottom: 3px solid rgba(0, 247, 255, 0.5);
+}
+
+.liked-characters h3 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  color: transparent;
+  background: linear-gradient(90deg, #ff00aa, #00f7ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 4rem;
+  text-shadow: 0 0 25px rgba(255, 0, 170, 0.5);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 1.5rem 4rem;
+  position: relative;
+}
+
+.liked-characters h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(90deg, #ff00aa, #00f7ff);
+}
+
+.liked-characters .character-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  padding: 0;
+  perspective: none;
+}
+
+.liked-characters .character-card {
+  transform: scale(1);
+  opacity: 1;
+  max-width: 500px;
+  margin: 0 auto;
+  clip-path: none;
+  border-radius: 2rem;
+  overflow: visible;
+  box-shadow: 
+    0 0 60px rgba(255, 0, 170, 0.6),
+    0 0 40px rgba(0, 247, 255, 0.6);
+}
+
+.liked-characters .character-card:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 0 80px rgba(255, 0, 170, 0.8),
+    0 0 60px rgba(0, 247, 255, 0.8);
+}
+
+.liked-characters .character-image-container {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.liked-characters .character-image-container img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.liked-characters .character-card:hover .character-image-container img {
+  transform: scale(1.1);
+}
+
+.liked-characters .character-info {
+  padding: 2rem;
+  text-align: center;
+  background: rgba(30, 20, 40, 0.9);
+  border-radius: 0 0 2rem 2rem;
+}
+
+/* 🌐 Responsive para Dispositivos Interdimensionales */
+@media (max-width: 1024px) {
+  .character-list {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .details-page-header {
+    padding: 2rem;
+  }
+  
+  .liked-characters .character-card {
+    max-width: 400px;
+  }
+  
+  .liked-characters .character-image-container {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .details-page {
+    padding: 3rem 1rem;
+  }
+  
+  .character-list {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+  
+  .details-page-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .details-page-subtitle {
+    font-size: 1.4rem;
+  }
+  
+  .like-btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .character-likes {
+    font-size: 1.5rem;
+  }
+  
+  .liked-characters .character-card {
+    max-width: 320px;
+  }
+  
+  .liked-characters .character-image-container {
+    height: 300px;
+  }
+}
+
+/* ✨ Efecto de Partículas Flotantes */
+.floating-particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 247, 255, 0.6);
+  border-radius: 50%;
+  animation: float 8s infinite ease-in-out;
+  z-index: 1;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(20px, -20px);
+  }
+  50% {
+    transform: translate(-20px, 10px);
+  }
+  75% {
+    transform: translate(10px, 20px);
+  }
+}
+
+/* Posicionar partículas */
+.floating-particle:nth-child(1) {
+  top: 10%;
+  left: 15%;
+  animation-delay: 0s;
+}
+.floating-particle:nth-child(2) {
+  top: 70%;
+  left: 80%;
+  animation-delay: 2s;
+}
+.floating-particle:nth-child(3) {
+  top: 40%;
+  left: 25%;
+  animation-delay: 4s;
+}
+.floating-particle:nth-child(4) {
+  top: 60%;
+  left: 60%;
+  animation-delay: 6s;
+}
